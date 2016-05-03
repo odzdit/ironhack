@@ -1,13 +1,5 @@
-class Home
-  attr_reader(:name, :city, :capacity, :price)
-
-  def initialize(name, city, capacity, price)
-    @name = name
-    @city = city
-    @capacity = capacity
-    @price = price
-  end
-end
+require_relative ('lib/home')
+require_relative ('lib/home_sorter')
 
 homes = [
   Home.new("Dieter's place", "Cancun", 3, 40),
@@ -71,10 +63,13 @@ homes = [
 # property_price = gets.chomp
 
 # new_property = homes.find do |hm|
-#   hm.price == property_price.to_i
+# hm.price == property_price.to_i
 # end
-# puts "The first home that costs $41 is:"
+# puts "The first home that costs #{property_price} is:"
 # puts new_property.name
 
+#Iteration 2.1
 
+home_sorter = HomeSorter.new(homes)
+home_sorter.home_printer
 
