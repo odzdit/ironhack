@@ -6,8 +6,7 @@
 	# Publish(aka print) all of the posts
 
 class Blog
-	attr_accessor :current_page
-	def initialize 
+2	def initialize 
 		@posts = []
 		@current_page = 1
 		@posts_per_page = 3
@@ -36,8 +35,6 @@ class Blog
 
 		def publish_next_page
 			last_page = (@posts.length.to_f/@posts_per_page).ceil
-			puts last_page
-			puts @posts_per_page
 			if @current_page == last_page
 				# dont go forward
 				puts "You're on the last page"
