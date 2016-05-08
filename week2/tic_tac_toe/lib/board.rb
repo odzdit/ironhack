@@ -40,7 +40,6 @@ class Board
 		if diagonal_winner? 
 		end	
 		if vertical_winner?
-			vertical_winner
 		end
 	end
 
