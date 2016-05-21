@@ -16,4 +16,17 @@ class FizzBuzz
 			return "FizzBuzz"
 		end
 	end
+
+def div_by_none(number)
+		if number % 15 != 0
+			return number
+		elsif
+			number % 3 != 0
+			return number
+		else
+			number % 5 != 0
+			return number
+		end
+	end
+
 end
