@@ -1,24 +1,68 @@
-require_relative("../lib/fizzbuzz")
-require("spec_helper")
+require_relative('../lib/fizzbuzz')
+require('spec_helper')
 
-describe "FizzBuzz" do
-	before :each do
-	@fizzbuzz = FizzBuzz.new	
-end
+#TDD approach makes you write the test before you write the code. This can help you
+# create and write the methods before solving the problem
+describe "FizzBuzz" do 
 
-	it "If number is divisible by 3 puts Fizz" do
-		expect(@fizzbuzz.div_by_3(3)).to eq("Fizz")
-	end
+		before :each do 
+			@buzzer = FizzBuzz.new
+		end
 
-it "If number is divisible by 5 puts Fizz" do
-		expect(@fizzbuzz.div_by_5(5)).to eq("Buzz")
-	end
+		describe "#fizz?" do 
+			it "should return true if the number is divisible by 3" do
+				expect(@buzzer.fizz?(6)).to eq(true) 
+			end
 
-it "If number is divisible by 15 puts Fizz" do
-		expect(@fizzbuzz.div_by_15(15)).to eq("FizzBuzz")
-	end
+			it "should return false if the number is not divisible by 3" do 
+				expect(@buzzer.fizz?(7)).to eq(false)
+			end
+		end 
 
-it "If number is not divisible by either 3, 5 or 15 puts Fizz" do
-		expect(@fizzbuzz.div_by_none(14)).to eq(14)
+		describe "#buzz?" do
+			 it "should return true if the number is divisible by 5" do
+			 		expect(@buzzer.buzz?(10)).to eq(true)
+			 end
+
+			 it "should return false if the number is not divisible by 5" do 
+			 		expect(@buzzer.buzz?(7)).to eq(false)
+			 end
+		end
+
+		describe "#fizzbuzz?" do 
+			it "should return true if the number is divisible by 5 and 3" do
+					expect(@buzzer.fizz_buzz?(15)).to eq(true)
+			end
+
+			it "should return false if the number is not divisible by 5 and 3" do 
+					expect(@buzzer.fizz_buzz?(7)).to eq(false)
+			end
+		end
+
+		describe "#fizz_printer" do 
+			it "should count from 1 to a number, and return a new array with that number of elements" do 
+				expect(@buzzer.fizz_printer(100).length).to eq(100)
+			end
+
+		describe "#fizz_printer" do 
+			it "should replace multiples of 3 with Fizz" do 
+				expect(@buzzer.fizz_printer(100)[2]).to eq("Fizz")
+			end
+		end
+
+
+		describe "#fizz_printer" do 
+			it "should replace multiples of 5 with Buzz" do 
+				expect(@buzzer.fizz_printer(100)[4]).to eq("Buzz")
+			end
+		end
+	
+		describe "#fizz_printer" do 
+			it "should replace multiples of 5 and with FizzBuzz" do 
+				expect(@buzzer.fizz_printer(100)[14]).to eq("FizzBuzz")
+			end
+		end
+	
+
 	end
 end

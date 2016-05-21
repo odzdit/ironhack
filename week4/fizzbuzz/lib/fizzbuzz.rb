@@ -1,32 +1,30 @@
 class FizzBuzz
-	def div_by_3(number)
-		if number % 3 == 0
-			return "Fizz"
-		end
+	def fizz?(number)
+		number % 3 == 0
 	end
 
-	def div_by_5(number)
-		if number % 5 == 0
-			return "Buzz"
-		end
+	def buzz?(number)
+		number % 5 == 0
 	end
 
-	def div_by_15(number)
-		if number % 15 == 0
-			return "FizzBuzz"
-		end
+	def fizz_buzz?(number)
+		fizz?(number) && buzz?(number)
 	end
 
-def div_by_none(number)
-		if number % 15 != 0
-			return number
-		elsif
-			number % 3 != 0
-			return number
-		else
-			number % 5 != 0
-			return number
-		end
-	end
+	def fizz_printer(number)
+		array = []
 
+		(1..number).each do | num | 
+			if fizz_buzz?(num)
+				array.push("FizzBuzz")
+			elsif buzz?(num)
+				array.push("Buzz")
+			elsif fizz?(num)
+			  array.push("Fizz")
+			else
+			  array.push(num)
+			end
+		end
+		array
+	end
 end
