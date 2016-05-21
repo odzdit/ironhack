@@ -7,16 +7,15 @@ describe "FizzBuzz" do
 end
 
 	it "If number if divisible by 3 puts Fizz" do
-		expect(@fizzbuzz.div_by_3("9")).to eq(0)
+		expect(@fizzbuzz.div_by_3(9)).to eq("Fizz")
 	end
 
+it "If number if divisible by 5 puts Fizz" do
+		expect(@fizzbuzz.div_by_5(5)).to eq("Buzz")
+	end
 
-	# it "Puts fizz in Every Number divisible by 5" do
-	# 	expect(@fizzbuzz.div_by_3("")).to eq("Buzz")
-	# end
+it "If number if divisible by 15 puts Fizz" do
+		expect(@fizzbuzz.div_by_15(15)).to eq("FizzBuzz")
+	end
 
-
-	# it "Puts fizz in Every Number divisible by 15" do
-	# 	expect(@fizzbuzz.div_by_3("")).to eq("FizzBuzz")
-	# end
 end
