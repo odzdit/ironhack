@@ -1,5 +1,5 @@
-require_relative("lib/string_calculator")
-require "spec_helper"
+require_relative("../lib/string_calculator")
+require("spec_helper")
 
 RSpec.describe StringCalculator do
 	it "returns 0 for empty string" do
