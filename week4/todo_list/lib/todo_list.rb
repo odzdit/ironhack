@@ -1,15 +1,14 @@
 class ToDoList
 	def initialize
-		@task = task
+		@tasks = []
 	end
 
 	def create_task(task)
-		todo_list = []
-		todo_list.push(task)
+		 @tasks.push(task)
 	end
 
 	def delete_task(task)
-		todo_list.delete(task)
+		@tasks.delete(task)
 	end
 		
 	def update_task(task)

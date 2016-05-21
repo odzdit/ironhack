@@ -1,4 +1,5 @@
 require_relative('../lib/todo_list')
+require_relative('../lib/task')
 require('spec_helper')
 
 #TDD approach makes you write the test before you write the code. This can help you
@@ -6,11 +7,12 @@ require('spec_helper')
 describe "ToDoList" do 
 
 	before :each do 
-		@List = ToDoList.new
+		todo_list = ToDoList.new
 	end
 end
 	describe "create_task" do 
 		it "It should create a task and add it to the array" do
-		expect(@List.create_task("Go Shopping")).to eq("Go shopping") 
+		expect(todo_list.create_task("Go Shopping")[0]).to eq("Go shopping") 
 	end
 end
+  
