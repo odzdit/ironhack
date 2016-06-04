@@ -1,0 +1,19 @@
+<!-- views/.erb -->
+<!doctype html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <h1>Welcome to Dieter's Platform Please login below</h1>
+  <p>Type your username and password</p><br>
+
+<form action="/login_validator" method="POST">
+  <input type="text" name="username" placeholder="Login"> <br>
+  <input type="password" name="password" placeholder="Password"> <br>
+<button type="submit" name="login_button">LOGIN</button>
+</form>
+
+
+</body>
+</html>
