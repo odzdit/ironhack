@@ -1,0 +1,95 @@
+body {
+		background: url('../images/cpuppy.jpg') ;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: white;
+
+}
+.container {
+    width: 300px;
+    margin: 0 auto;
+}
+.row {
+margin-left: -20px;
+}
+[class*="span"] {
+display: inline;
+float: left;
+margin-left: 20px;
+}
+.span-one-third {
+width: 300px;
+background-color: blue;
+margin-bottom: 10px;
+}
+
+.span-one-third2 {
+width: 300px;
+background-color: green;
+margin-bottom: 10px;
+}
+
+.span-one-third3 {
+width: 300px;
+background-color: red;
+margin-bottom: 10px;
+}
+
+p {
+	color: white;
+	/*display: fluid;*/
+}
+
+
+
+/*show a larger image when you're on a big screen*/
+
+
+@media screen and (min-width: 480px) {
+	body {
+			background-image: url('../images/image3.jpeg');
+		}
+	h1 {
+		color: blue;
+	}
+	.container {
+		width: 480;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	body {
+			background-image: url('../images/image2.jpeg');
+		}
+	h1{
+		color: pink;
+	}
+	.container {
+		width: 768px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+			background-image: url('../images/image1.jpeg');
+		}
+	h1 {
+		color: green;
+	}
+	.container {
+		width: 1024px;
+	}
+ }
+
+@media screen and (min-width: 1200px) {
+	body {
+			background-image: url('../images/dog.jpeg');
+		}
+	h1 {
+	color: gray;
+	}
+	.container{
+		width: 1200px;
+	}
+}
+
