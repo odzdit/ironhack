@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Results</title>
+</head>
+	<body>
+	<h1> And now a Question</h1>
+	<header>What movie was released before the year <%= @new_movie.year %>? </header>
+		<% @marray.each do | i | %>
+			<% if @new_movie.year == i.year %>
+				<button type="submit" name="<% i.year %>" value="year"> <img src="<%=	i.poster %>" width="100px" onClick="alert ('yay')"></button>
+				<% else %>
+				<button type="submit" name="<% i.year %>" value="year"> <img src="<%=	i.poster %>" width="100px" onClick="alert ('nay')"></button>
+			<% end %>
+		<% end %>
+	</body>
+</html>
