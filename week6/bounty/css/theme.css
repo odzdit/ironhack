@@ -1,0 +1,89 @@
+body{
+	background-color: #F5F5F5;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+.avatar{
+	height: 35px;
+	border-radius: 50px;
+}
+
+.square {
+	background-color: white;
+	position:relative;
+	height: 40px
+	width:50px;
+	border-radius: 3px;
+	border-color: black;
+	border-width: 1px;
+}
+
+.post-title{
+	margin-left: 2px;
+}
+
+.post-info{
+	border-width: 2px
+	border-color:black;
+
+}
+
+.symbol{
+	background-color: #F3AB4C;
+	color: white;
+	border-radius: 10px;
+	margin-left:10px 
+}
+
+.now{
+	color: #F65F5A;
+}
+
+.htmlcss{
+	color: #333
+}
+
+.number{
+	color:#F3AB4C;
+}
+
+.revolver{
+	height: 50px;
+}
+
+.post{
+	margin-left: 5px;
+}
+
+.circle{
+	border-radius: 10px
+	background-color: gray;
+	color: gray;
+	margin-left: 10px;
+}
+
+.list-inline{
+	margin-bottom: 0px;
+}
+
+.heading{
+	border-bottom: 1px solid #F5F5F5;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.body {
+	padding-top: 20px;
+	padding-bottom: 40px;
+	padding-left:10px;
+}
+
+.circle-button{
+	border-radius: 25px;
+	border-color: #2889D8;
+}
+
+.content{
+	font-size: 16px;
+	margin-left: 10px;
+}

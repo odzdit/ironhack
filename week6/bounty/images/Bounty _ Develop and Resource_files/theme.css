@@ -1,0 +1,47 @@
+body{
+	background-color: #F5F5F5;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+.avatar{
+	height: 30px;
+	border-radius: 50px;
+}
+
+.post{
+	background-color: #F5F5F5;
+}
+
+.square {
+	background-color: white;
+	position:relative;
+	height: 40px
+	width:50px;
+	padding-right: 10px;
+	border-radius: 3px;
+	border-color: black;
+	border-width: 1px;
+	
+}
+
+.symbol{
+	background-color: #F3AB4C;
+	color: white;
+	border-radius: 10px;
+}
+
+.now{
+	color: #F65F5A;
+}
+
+.htmlcss{
+	color: #333
+}
+
+.number{
+	color:#F3AB4C;
+}
+
+.revolver{
+	height: 50px;
+}
