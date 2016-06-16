@@ -1,10 +1,12 @@
-.col {
+.header {
 	text-align: center;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: center;
     color: rgb(0, 0, 0);
-    width: 960px;
-    height: 73px;
+    border: 1px solid black;
+    border-width: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .body {
@@ -13,7 +15,56 @@
 	align-self: center;
 }
 
-image {
+.avatar {
 	width:50px;
-	height:50px;
+	position: relative;
+	left:25%;
+}
+
+.menu {
+	position:relative;
+	left: 25%;
+	padding-right: 62px;
+	padding-left: 62px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.separator {
+	position: absolute;
+	top: 30%;
+	right: 35%
+}
+.moo {
+	position: absolute;
+	top: 30%;
+	right: 21%
+}
+
+.title {
+	position: relative;
+	left:10%;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.welcome{
+	font-size: 30px;
+	}
+
+.button {
+	width: 100px;
+	border: 1px solid black;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.forma {
+	padding-left: 100px;
+	padding-right: 100px;
+    border: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
