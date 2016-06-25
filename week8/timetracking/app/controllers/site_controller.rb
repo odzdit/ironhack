@@ -6,3 +6,4 @@ class SiteController < ApplicationController
 		render 'email'
 	end
 end
+	
