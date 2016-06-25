@@ -1,0 +1,17 @@
+<%= form_for @contact do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :address %>
+	<%= f.text_area :address %>
+	<br>
+	<%= f.label :phone %>
+	<%= f.text_area :phone %>
+	<br>
+	<%= f.label :email %>
+	<%= f.text_area :email %>
+	<br>
+
+<%= f.submit 'Save' %>
+<% end %>
+
