@@ -15,4 +15,7 @@ class SiteController < ApplicationController
 	def login
 	end
 
+	def contactform
+	end
+
 end
