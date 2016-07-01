@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
-	
+
 	def index
-		@projects = Project.limit(10).order(created_at: :desc)
+		@projects = Project.last_created_projects(10)
 	end
 
 	def new
@@ -9,17 +9,20 @@ class ProjectsController < ApplicationController
 	end
 
 	def create
-	@project = Project.new(
-		name: params[:project][:name],
-	description: params[:project][:description]
-	)
-	@project.save
-	redirect_to '/projects/'
+	 	@project =Project.new(
+	 		name: params[:project][:name],
+	 		description: params[:project][:description]
+	 	)
+	 	@project.save
+
+	 	redirect_to '/projects'
 	end
 
 	def show
-		@project = Project.find(params[:id])
-		rescue ActiveRecord::RecordNotFound
-			redirect_to '/projects'
+		@project = Project.find_by(id: params[:id])
+		unless @project
+			render 'no_project_found'
 		end
 	end
+
+end
