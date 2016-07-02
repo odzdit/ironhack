@@ -6,16 +6,22 @@ Rails.application.routes.draw do
 
   get '/contact' => 'site#contact'
 
-  get '/pizza' => 'test#pizza'
+  resources :projects, only: [:index, :show, :new, :create] do
+  	resources :time_entries, only: [:index, :new, :create]
+  end
 
-  get '/projects' => 'projects#index'
 
-  get '/projects/new' => 'projects#new', as: :new_project
+  # get '/pizza' => 'test#pizza'
 
-  post '/projects' => 'projects#create'
+  # get '/projects' => 'projects#index'
 
-  get '/projects/:id' => 'projects#show'
+  # get '/projects/new' => 'projects#new', as: :new_project
 
-  get '/projects/:project_id/time_entries' => 'time_entries#index'
+  # post '/projects' => 'projects#create'
 
+  # get '/projects/:id' => 'projects#show'
+
+  # get '/projects/:project_id/time_entries' => 'time_entries#index'
+
+  # get'/projects/:project_id/time_entries/new' => 'time_entries#new'
 end
