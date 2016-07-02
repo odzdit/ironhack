@@ -1,0 +1,2 @@
+module ShorterlyHelper
+end
