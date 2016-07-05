@@ -1,0 +1,10 @@
+<ol>
+	<% @products.each do | single_entry |%>
+	<li>
+		<%= single_entry.title %> h - 
+		<%= single_entry.description %> m -
+		<%= single_entry.deadline %>		
+	</li>
+	<% end %>
+</ol>
+
