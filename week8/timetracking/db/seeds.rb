@@ -20,10 +20,10 @@ project3 = Project.create(name: "ryan", description: "some description")
 project4 = Project.create(name: "josh", description: "some description")
 project5 = Project.create(name: "leo", description: "some description")
 
-project = [project1, project2, project3, project4, project5]
+projects = [project1, project2, project3, project4, project5]
 
-project.each do | project |
+projects.each do | project |
 	(rand(5) + 1 ).times do | i |
-		project.time_entries.create(hours: rand(23), minutes: rand(59))
+		project.time_entries.create(hours: rand(23), minutes: rand(59), date: Time.now)
 	end
 end

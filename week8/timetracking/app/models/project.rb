@@ -1,9 +1,9 @@
 class Project < ActiveRecord::Base
 
 validates :name,  presence: true
-validates :name, uniqueness: true
+# validates :name, uniqueness: true
 validates :name, length: {maximum: 30}
-validates :name, format: {with: /\w*\s*/}
+# validates :name, format: {with: /\w*\s*/}
 
 	has_many :time_entries
 
