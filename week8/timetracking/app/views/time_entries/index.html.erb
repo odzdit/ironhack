@@ -1,13 +1,14 @@
 <%= link_to("Projects", projects_path) %>
 <%= link_to("New Time Entry", new_project_time_entry_path) %>
 <ol>
-	<% @time_entries.each do | single_entry |%>
+	<% @time_entries.each do | time_entry |%>
 	<li>
-		<%= single_entry.hours %> h - 
-		<%= single_entry.minutes %> m -
-		<%= single_entry.date %>
-		<%= link_to "Edit Time Entry", edit_project_time_entry_path(@project, single_entry) %>		
+		<%= time_entry.hours %> h - 
+		<%= time_entry.minutes %> m -
+		<%= time_entry.date %>
+		<%= link_to "Edit Time Entry", edit_project_time_entry_path(@project, time_entry) %>		
 	</li>
+	<%= link_to "Delete", project_time_entry_path(@project, time_entry), method: :delete, data: {confirm: "Are you sure?"} %>
 	<% end %>
 </ol>
 
