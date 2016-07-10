@@ -8,8 +8,7 @@ validates :price, presence: true
 validates :description, presence: true
 validates :price, numericality: true
 
-	def 
-	end
-		
+	def self.sort_by_price(price)
+		self.where( :price < price.to_i)
 	end
 end
