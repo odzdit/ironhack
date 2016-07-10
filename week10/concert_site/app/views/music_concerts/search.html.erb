@@ -1,0 +1,10 @@
+<h2> Choose your price to browse concerts </h2>
+<br/>
+<p> Use this page to browse concerts that will acommodate to your budget</p>
+<br/>
+<%= form_tag("/search_results", method: "get") do %>
+  <%= label_tag(:price, "Desired Price:") %>
+  <br/>
+  <%= text_field_tag(:price) %>
+  <%= submit_tag("Search") %>
+<% end %>

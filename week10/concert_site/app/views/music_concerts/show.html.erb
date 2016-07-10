@@ -1,0 +1,29 @@
+<h2>Buy your <%= @concert.artist %> Tickets!</h2>
+
+Venue: <%= @concert.venue %>
+<br/>
+City: <%= @concert.city %>
+<br/>
+Concert Price: <%= @concert.price %>
+<br/>
+Concert Date: <%= @concert.date %>
+<br/>
+Concert Description: <%= @concert.description %>
+
+<br/>
+<br/>
+<%= form_for  [@concert, @comment] do |f| %>
+		<%= f.label :Comment %>
+		<br/>
+		<%= f.text_area :body %>
+		<%= f.submit %>
+<% end %>
+
+Past comments:
+<ol>
+	<% @comments.each do | comment |%>
+			<li>
+				<%= comment.body %>
+			</li>
+		<% end %>
+</ol>

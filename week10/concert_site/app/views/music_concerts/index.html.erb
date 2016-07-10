@@ -1,0 +1,30 @@
+<div class="row"> 
+	<div class="col-sm-3 sidebar">
+		<h4>Concerts this Month</h4>
+		<br/>
+		<ol>
+			<% @concerts_month.each do | concert |%>
+			<li>
+				<strong><%= link_to "#{concert.artist}", music_concert_path(concert)  %> </strong> at <strong><%= concert.city %></strong>
+				<br/>
+				<strong>Date:</strong> <%= concert.date.to_formatted_s(:short) %>
+				<br/>
+				<strong>Price:</strong> $<%= concert.price %>
+			</li>
+			<% end %>
+		</ol>
+	</div>
+	<div class="col-sm-9">
+	<h2>Today's Concerts</h2>
+	<br/>
+		<ol>
+				<% @musicconcerts.each do | concert |%>
+				<li>
+					<strong><%= link_to "#{concert.artist}", music_concert_path(concert) %></strong> @<strong><%= concert.city %></strong>
+					<strong>Date:</strong> <%= concert.date.to_formatted_s(:short) %>
+					<strong>Price:</strong> $<%= concert.price %>	
+				</li>
+				<% end %>
+			</ol>
+	</div>
+</div>

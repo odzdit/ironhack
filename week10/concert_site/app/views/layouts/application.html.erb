@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <title>Ticketscheether</title>
+  
+</head>
+<body>
+<div class ="container-fluid">
+<div class="row menu">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+		<header>
+			<h1> The Tickethub </h1>
+		</header>
+	</div>
+	<div class="col-md-3"></div>
+</div>
+
+<%= yield %>
+
+	<div class="row menu">
+		<footer>
+			<p>All Rights Reserved</p>
+		</footer>
+	</div>
+</body>
+</html>
+
