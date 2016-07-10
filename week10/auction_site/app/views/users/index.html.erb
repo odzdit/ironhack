@@ -1,0 +1,12 @@
+<h1> User List </h1>
+<ol>
+	<% @users.each do | single_entry |%>
+	<li>
+		<%= link_to "#{single_entry.name}", user_products_path(single_entry) %> - 
+		<%= single_entry.email %>
+	</li>
+	<% end %>
+</ol>
+<button>
+		<%= link_to 'Products', products_all_path %>
+</button>

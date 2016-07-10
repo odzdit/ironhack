@@ -1,0 +1,17 @@
+<h1><%= @product.title %> description </h1>
+
+<h5> Product Description </h5>
+<%= @product.description %>
+<br/>
+
+<header> Submit your bids </header>
+
+<%= form_for  [@product, @bid] do |f| %>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+		<br>
+		<%= f.label :amount %>
+		<%= f.number_field :amount %>
+		<br>
+		<%= f.submit %>
+<% end %>

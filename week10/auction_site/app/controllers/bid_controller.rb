@@ -1,0 +1,21 @@
+class BidsController < ApplicationController
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+end

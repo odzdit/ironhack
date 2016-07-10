@@ -1,0 +1,14 @@
+<h1>Welcome to the list of all products </h1>
+
+<ol>
+	<% @products.each do | single_entry |%>
+	<li>
+		<%= single_entry.title %> - 
+		<%= single_entry.description %> -
+		<%= single_entry.deadline %>		
+	</li>
+	<% end %>
+</ol>
+<button>
+		<%= link_to 'Users', users_path %>
+</button>
