@@ -19,7 +19,9 @@ var vikingPit = function(viking1, viking2){
 
 		viking1 = new_def
 		viking2 = new_atk
-		console.log()
+		if (vikin1.health =)
+		else
+
 }
 
 
