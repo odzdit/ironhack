@@ -32,12 +32,9 @@ class MusicConcertsController < ApplicationController
 		@comments=@concert.comments.all
 		# @comments = Comment.find_by(params[:id])
 	end
-	
-	def search
-	end
 
 	def search_results
-		@concerts = MusicConcert.sort_by_price(params[:price])
+		@concert = MusicConcert.where("price <= ?", params[:price].to_f).upcoming_concerts.order(price: :asc)
 	end
 
 end
