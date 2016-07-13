@@ -14,7 +14,7 @@
 			<% end %>
 		</ol>
 	</div>
-	<div class="col-sm-9">
+	<div class="col-sm-6">
 	<h2>Today's Concerts</h2>
 	<br/>
 		<ol>
@@ -27,4 +27,14 @@
 				<% end %>
 			</ol>
 	</div>
+	<div class="col-sm-3"> 
+	<h5>Seach your Concerts by price </h5>
+			 <%= form_tag("/search_results", method: "get") do %>
+			 <%= label_tag(:price, "Desired Price:") %>
+			 <br/>
+			 <%= number_field_tag(:price) %>
+			 <%= submit_tag("Search") %>
+		<% end %>
+	</div>
+
 </div>

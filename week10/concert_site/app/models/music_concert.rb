@@ -8,8 +8,7 @@ validates :price, presence: true
 validates :description, presence: true
 validates :price, numericality: true
 
-	def 
-	end
-		
-	end
+	def self.upcoming_concerts
+		MusicConcert.where("date > ?", (Time.new.beginning_of_day))
+	end	
 end

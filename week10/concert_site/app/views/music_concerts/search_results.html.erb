@@ -1,0 +1,15 @@
+<div class="row"> 
+	<div class="col-sm-9">
+	<h2> Concerts Results</h2>
+	<br/>
+		<ol>
+				<% @concert.each do | concert |%>
+				<li>
+					<strong><%= link_to "#{concert.artist}", music_concert_path(concert) %></strong> @<strong><%= concert.city %></strong>
+					<strong>Date:</strong> <%= concert.date.to_formatted_s(:short) %>
+					<strong>Price:</strong> $<%= concert.price %>	
+				</li>
+				<% end %>
+			</ol>
+	</div>
+</div>
