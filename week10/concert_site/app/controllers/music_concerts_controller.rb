@@ -37,6 +37,7 @@ class MusicConcertsController < ApplicationController
 	end
 
 	def search_results
+ 		@concert_price = MusicConcert.price.sort
 	end
 
 end

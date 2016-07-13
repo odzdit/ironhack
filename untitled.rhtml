@@ -1,0 +1,17 @@
+<h1> Welcome to Dieter's Concert page Product Page </h1>
+
+<ol>
+	<% @musiconcert.each do | conert |%>
+	<li>
+		<%= link_to "#{concert.title}", user_product_path(@user, concert) %> - 
+		<%= concert.description %> m -
+		<%= concert.deadline %>		
+	</li>
+	<% end %>
+</ol>
+<button>
+		<%= link_to 'Users', users_path %>
+</button>
+<button>
+		<%= link_to 'Create Product', new_user_product_path %>
+</button>
