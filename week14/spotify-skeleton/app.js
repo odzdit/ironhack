@@ -13,9 +13,10 @@ $(document).ready(function(){
 	});
 
 	function getTrack(response){
-		var song_array = response.tracks;
-		var songName = song_array.items[0];
-		var artist = song_array.items[0].artists[0]
+		var song_array = response.tracks.items;
+		console.log(song_array)
+		var songName = response.tracks.items[0];
+		var artist = response.tracks.items[0].artists[0]
 		var webCover = songName.album.images[0]
 		var previewUrl = songName.preview_url
 		var songNames = song_array.items
@@ -29,10 +30,8 @@ $(document).ready(function(){
 		$(".album_cover").prop("src", cover)
 		$(".js-player").prop("src", previewUrl)
 
-		
-		songNames.forEach(function(song_name){
-			console.log(song_name.name)
-		});
+		var song_array_string = JSON.stringify(song_array);
+		localStorage.setItem("Song-names-array", song_array_string)
 		
 
 	};
@@ -40,6 +39,25 @@ $(document).ready(function(){
 	function errorTrack(err){
 
 	};
+
+	$(".js-additional-songs").on("click", function(){
+		var second_array = JSON.parse(localStorage.getItem("Song-names-array"))
+		
+		second_array.forEach(function(object_name){
+			var modal_song_name = object_name.name
+			var modal_song_name_id = object_name.id
+			var modal_song_artist = object_name.artists
+			console.log(modal_song_artist)
+			var modalHtmlTwo = `
+			<li class="clickeable-song" id="${modal_song_name_id}" data-artist="${modal_song_artist}">Song: :${modal_song_name}</li>
+			`
+			$(".js-song-list").append(modalHtmlTwo)
+		})
+		$(".js-song-modal").modal("show")
+		// console.log(second_array_names)
+	})
+
+
 
 
 	$(".PLAY").on("click", function(){
