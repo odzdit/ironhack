@@ -1,0 +1,19 @@
+<h1><%= @post.title %> GIF </h1>
+
+
+<%= image_tag(@post.gif_url) %>
+<br/>
+<br/>
+<p>Vote Now for this GIF!</p>
+
+<form action="/posts/<%=@post.id%>/down" method="POST">
+	<button type="submit">
+	<%= image_tag("iconup") %>
+	</button>
+</form>
+<br/>
+<form action="/posts/<%=@post.id%>/up" method="POST">
+	<button type="submit">
+		<%= image_tag("down") %>
+	</button>
+</form>

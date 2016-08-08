@@ -14,3 +14,4 @@ function slideLoader(file, callback) {
 
 
 module.exports = slideLoader;
+

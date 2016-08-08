@@ -1,0 +1,15 @@
+<h1><%= @post.title %></h1>
+<%= image_tag(@post.gif_url) %>
+<div>
+<strong>Votes:</strong><%= @post.votes %>
+</div>
+
+<form action="/posts/<%= @post.id %>/upvote" method="POST">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<button type="submit">Upvote</button>
+</form>
+
+<form action="/posts/<%= @post.id %>/downvote" method="POST">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<button type="submit">Downvote</button>
+</form>

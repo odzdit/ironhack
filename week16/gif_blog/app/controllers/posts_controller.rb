@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
 	def index
+		# @posts = Post.all
 		@posts = Post.all
-		# @posts = Post.where("votes > ?", 5) 
+		# @sorted_posts = @posts('created_at DESC')
 	end
 
 	def new
@@ -11,10 +12,27 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
 		if @post.save
-			redirect_to posts_path
+			render 'index'
 		else
 			render "new"
 		end
+	end
+
+	def show
+		@post = Post.find(params[:id])
+	end
+
+	def down
+		@post = Post.find(params[:id])
+		@post.votes -= 1
+		@post.save
+		redirect_to post_path
+	end
+
+	def up
+		@post = Post.find(params[:id])
+		@post.votes += 1
+		@post.save
 	end
 
 

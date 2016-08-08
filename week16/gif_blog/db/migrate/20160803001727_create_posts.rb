@@ -4,8 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :gif_url
       t.string :votes
-      t.string :integer
-
+      
       t.timestamps null: false
     end
   end

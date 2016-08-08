@@ -1,0 +1,19 @@
+<h1>Welcome to the giftagram</h1>
+<button class="btn-danger btn-xs">
+<%= link_to("Sort above 5", controller: "posts", command: "five")%>
+</button>
+<button class="btn-danger btn-xs">
+<%= link_to("Sort by Creation", controller: "posts", command: "creation")%>
+</button>
+<button class="btn-danger btn-xs">
+<%= link_to("Sort by Vote", controller: "posts", command: "vote")%>
+</button>
+
+<% @posts.each do |post| %>
+	<h3><%= post.title %></h3>
+	<%= image_tag(post.gif_url) %>
+<div>
+	<%= link_to "See More", post_path(post) %>
+</div>
+<hr>
+ <% end %>

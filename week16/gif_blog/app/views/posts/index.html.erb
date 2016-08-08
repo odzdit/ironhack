@@ -1,11 +1,13 @@
 <h1>Welcome to the giftagram</h1>
+	<button class="btn btn-xs btn-danger">Sort Posts </button>
+	<button class="btn btn-xs btn-danger">Sort by Votes </button>
 	<ul>
 	<% @posts.each do | single_post | %>
 		<li>
 			<h2><%= single_post.title %></h2>
 			<%= image_tag(single_post.gif_url) %> <br/>
 			Votes: <%= single_post.votes %><br/>
-			<button class="btn btn-xs btn-success">View </button>
+				<%= link_to 'Post', post_path(single_post.id) %>
 			<% end %>
 		</li>
 	</ul>
