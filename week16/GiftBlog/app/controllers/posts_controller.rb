@@ -17,16 +17,13 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.all
-		@above_five_posts = Post.where("votes > ?", 5) 
-		@by_date_posts = Post.order(created_at: :asc) 
-		@by_vote_posts = Post.order(votes: :desc) 
 
 		if params[:command] == "five"
-			@posts = @above_five_posts
+			@posts = Post.where("votes > ?", 5) 
 		elsif params[:command] == "creation"
-			@posts = @by_vote_posts
+			@posts = @by_vote_posts = Post.order(votes: :asc) 
 		else 
-			@posts = @by_date_posts 
+			@posts = Post.order(created_at: :asc)  
 		end
 	end
 
