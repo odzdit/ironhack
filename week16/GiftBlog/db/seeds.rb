@@ -5,19 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-<<<<<<< HEAD
-
-Post.create!(title:"The Future", gif_url:"https://media.giphy.com/media/kYwlqpDOT3A0o/giphy.gif")
-Post.create!(title:"Jimmy", gif_url:"https://media.giphy.com/media/3o7TKFCdyLyXnEWAbS/giphy.gif")
-Post.create!(title:"Suckerpunch", gif_url:"https://media.giphy.com/media/3oEjHBzNclvftM916M/giphy.gif")
-Post.create!(title:"Suckerpunch v2", gif_url:"https://media.giphy.com/media/z48aJruaX0Jsk/giphy.gif")
 
 
-=======
+# Post.create!(title:"The Future", gif_url:"https://media.giphy.com/media/kYwlqpDOT3A0o/giphy.gif")
+# Post.create!(title:"Jimmy", gif_url:"https://media.giphy.com/media/3o7TKFCdyLyXnEWAbS/giphy.gif")
+# Post.create!(title:"Suckerpunch", gif_url:"https://media.giphy.com/media/3oEjHBzNclvftM916M/giphy.gif")
+# Post.create!(title:"Suckerpunch v2", gif_url:"https://media.giphy.com/media/z48aJruaX0Jsk/giphy.gif")
+
+
 Label.create!(name: "Funny")
 Label.create!(name: "Sad")
 Label.create!(name: "NSFW")
 Label.create!(name: "Histerical")
 Label.create!(name: "Trump")
 Label.create!(name: "Happy")
->>>>>>> 2ce59080043625363b9345e5675dcc75687a8a0b
+
