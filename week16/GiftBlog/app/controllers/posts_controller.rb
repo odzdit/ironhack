@@ -3,12 +3,11 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
-		@labeled_post = LabelledPost.new
 	end
 
 	def create
 		@post = Post.new(post_params)
-		@labeled_post = LabelledPost.new(label_params)
+		@post.labels.push
 
 
 		if @post.save
@@ -52,7 +51,7 @@ class PostsController < ApplicationController
 
 private
 def post_params
-	params.require(:post).permit(:title, :gif_url)
+	params.require(:post).permit(:title, :gif_url, :label_ids)
 	end
 
 def label_params

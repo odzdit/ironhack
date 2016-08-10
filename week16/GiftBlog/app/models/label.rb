@@ -1,4 +1,4 @@
 class Label < ActiveRecord::Base
-	has_many :labeled_posts
-	has_many :posts, through: :labels
+	has_many :labelled_posts
+	has_many :posts, through: :labelled_posts
 end
