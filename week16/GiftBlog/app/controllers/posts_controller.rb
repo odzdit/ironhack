@@ -7,7 +7,8 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
-		@post.labels.push
+		@labels = Label.where(id: params[:label_ids])
+		@post.labels.push(@labels)
 
 
 		if @post.save

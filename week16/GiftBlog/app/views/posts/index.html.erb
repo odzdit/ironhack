@@ -1,20 +1,35 @@
-<h1>Welcome to the giftagram</h1>
-<button class="btn-danger btn-xs">
-<%= link_to("Sort above 5", controller: "posts", command: "five")%>
-</button>
-<button class="btn-danger btn-xs">
-<%= link_to("Sort by Creation", controller: "posts", command: "creation")%>
-</button>
-<button class="btn-danger btn-xs">
-<%= link_to("Sort by Vote", controller: "posts", command: "vote")%>
-</button>
+<div class="container-fluid">
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-6 bg-info">
+	<h1>Welcome to the giftagram</h1>
 
-<% @posts.each do |post| %>
-	<h3><%= post.title %></h3>
-	<%= image_tag(post.gif_url) %><br/>
-	Votes: <%= post.votes %>
-<div>
-	<%= link_to "See More", post_path(post) %>
+	<strong>Sort Your Posts</strong>
+		<button class="btn btn-danger btn-xs">
+			<%= link_to("Sort above 5", controller: "posts", command: "five")%>
+		</button>
+		<button class="btn btn-danger btn-xs">
+			<%= link_to("Sort by Creation", controller: "posts", command: "creation")%>
+		</button>
+		<button class="btn btn-danger btn btn-xs">
+			<%= link_to("Sort by Vote", controller: "posts", command: "vote")%>
+		</button><br/><br/>
+		<strong>or create yours here -></strong>
+
+		<button class="btn btn-danger btn-xs">
+			<%= link_to("Create Post", new_post_path) %>
+		</button>
+		<% @posts.each do |post| %>
+			<h3><%= post.title %></h3>
+			<%= image_tag(post.gif_url) %><br/>
+			Votes: <%= post.votes %>
+		<div>
+		<%= link_to "See More", post_path(post) %>
+		</div>
+		<hr class="bg-primary">
+		 <% end %>
+	 </div>
+	 <div>
+	 <div class="col-md-3">
+	 </div>
 </div>
-<hr>
- <% end %>
