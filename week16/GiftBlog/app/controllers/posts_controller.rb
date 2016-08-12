@@ -20,13 +20,34 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.all
+		# @labeled_posts = LabelledPost.find_by(params[:id])
 
 		if params[:command] == "five"
 			@posts = Post.where("votes > ?", 5) 
 		elsif params[:command] == "creation"
 			@posts = @by_vote_posts = Post.order(votes: :asc) 
-		else 
-			@posts = Post.order(created_at: :asc)  
+		elsif params[:command] == "vote" 
+			@posts = Post.order(created_at: :asc)  	
+		elsif params[:command] == "funny" 
+			@label = Label.find_by(id: 1)
+			@posts = @label.posts 
+		elsif params[:command] == "sad" 
+			@label = Label.find_by(id: 2)
+			@posts = @label.posts 
+		elsif params[:command] == "nsfw" 
+			@label = Label.find_by(id: 3)
+			# console @label
+			@posts = @label.posts 
+		elsif params[:command] == "histerical" 
+			@label = Label.find_by(id: 4)
+			@posts = @label.posts
+		elsif params[:command] == "trump" 
+			@label = Label.find_by(id: 5)
+			@posts = @label.posts
+		elsif params[:command] == "happy" 
+			@label = Label.find_by(id: 6)
+			@posts = @label.posts
+
 		end
 
 	end
@@ -52,7 +73,7 @@ class PostsController < ApplicationController
 
 private
 def post_params
-	params.require(:post).permit(:title, :gif_url, :label_ids)
+	params.require(:post).permit(:title, :gif_url, :label_ids [])
 	end
 
 def label_params

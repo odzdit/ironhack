@@ -18,7 +18,28 @@
 
 		<button class="btn btn-danger btn-xs">
 			<%= link_to("Create Post", new_post_path) %>
+		</button><br/><br/>
+		Sort Posts by Label:<br/>
+		<!-- SORT -->
+		<button class="btn btn-danger btn-xs">
+			<%= link_to("Funny", controller: "posts", command: "funny" ) %>
 		</button>
+		<button class="btn btn-danger btn-xs">
+			<%= link_to("Sad", controller: "posts", command: "sad" ) %>
+		</button>
+		<button class="btn btn-danger btn-xs">
+			<%= link_to("NSFW", controller: "posts", command: "nsfw" ) %>
+		</button>
+		<button class="btn btn-danger btn-xs">
+			<%= link_to("Histerical", controller: "posts", command: "histerical" ) %>
+		</button>
+		<button class="btn btn-danger btn-xs">
+			<%= link_to("Trum", controller: "posts", command: "trump" ) %>
+		</button>
+		<button class="btn btn-danger btn-xs">
+			<%= link_to("Happy", controller: "posts", command: "happy" ) %>
+		</button>
+		
 		<% @posts.each do |post| %>
 			<h3><%= post.title %></h3>
 			<%= image_tag(post.gif_url) %><br/>
