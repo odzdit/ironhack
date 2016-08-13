@@ -6,6 +6,10 @@ class SandwichIngredientController < ApplicationController
 		ingredient = Ingredient.find_by(id: params[:ingredient_id])
 		sandwich.ingredients.push(ingredient)
 		sandwich_ingredients = sandwich.ingredients
+
+		new_calories = sandwich.total_calores += ingredient.calories
+		sandwich.update(total_calores: new_calories)
+
 		sandwich_all = {
 			"sandwich" => sandwich,
 			"ingredients" => sandwich_ingredients
