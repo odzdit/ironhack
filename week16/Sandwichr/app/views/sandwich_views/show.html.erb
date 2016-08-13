@@ -1,0 +1,17 @@
+<h1 class="js-sandwich" data-sandwich-id="<%= @sandwich.id %>"> This is the <%= @sandwich.name %> Sandwich Page </h1>
+<%= @sandwich.name %> ingredients are:
+<ul class=js-ingredient-list>
+	<% @ingredients.each do | ingredient | %>
+		<li> <%= ingredient.name %> | calories: <%= ingredient.calories %></li>
+		<% end %>
+</ul>
+<strong><%= @sandwich.name %></strong> Total Calories: <text class="js-total-calories" data-total-calories="<%= @sandwich.total_calores%>"><%= @sandwich.total_calores%></text> and it's bread type is <%= @sandwich.bread_type %><br/><br/>
+
+Add ingredients: 
+	<div>
+		<% @all_ingredients.each do | ingredient | %>
+		<button class="js-add-ingredient" data-ingredient-id="<%= ingredient.id%>"> 
+			<%= ingredient.name  %>
+		</button>
+		<% end %>
+	</div>
