@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   end
 
 # get '/products' => 'products#index'
-# get '/products/new' => 'products#new' 
+get '/products/new' => 'products#new' 
 
 get '/products_all' => 'products#all'
-get '/products/:id/bid' => 'bids#create', as: :product_bids
+post '/products/:id/bid' => 'bids#create', as: :product_bids
 end
