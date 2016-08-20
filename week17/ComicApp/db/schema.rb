@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817010826) do
+ActiveRecord::Schema.define(version: 20160819002038) do
 
   create_table "comics", force: :cascade do |t|
     t.string   "title"
     t.string   "publisher"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_comics_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
