@@ -1,7 +1,20 @@
-<h1> Sandwich Names:</h1>
+<h1>Welcome to the Joshway</h1>
+
+<% if user_signed_in? %>
+	<h1> Sandwich Names:</h1>
 <ul>
 <% @sandwiches.each do |sandwich| %>
 	<h3 data-sandwich-id=<%= sandwich.id %>> <%= link_to "#{sandwich.name}", sandwich_path(sandwich.id ) %></h3>
 	<% end %>
-
 </ul>
+
+	<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+
+		Please Sign In or Sign Up <br/>
+		<%= link_to "Sign Up", new_user_registration_path %>
+		<%= link_to "Login", new_user_session_path %>
+<% end %>
+
+
+
