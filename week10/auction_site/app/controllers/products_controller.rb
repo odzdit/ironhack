@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
 		@user = User.find(params[:user_id])
 		@product = @user.products.find_by_id(params[:id])
 		@bid = @product.bids.new
+		@bids = @product.bids
 	end
 
 

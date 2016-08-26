@@ -15,3 +15,12 @@
 		<br>
 		<%= f.submit %>
 <% end %>
+
+<h5>This Products Bids</h5>
+<ol>
+	<% @bids.each do | single_entry |%>
+	<li>
+		<%= single_entry.amount %> 
+	</li>
+	<% end %>
+</ol>
