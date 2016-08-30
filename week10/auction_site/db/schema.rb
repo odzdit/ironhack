@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160824012041) do
+ActiveRecord::Schema.define(version: 20160827185320) do
 
   create_table "bids", force: :cascade do |t|
     t.float    "amount"
@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 20160824012041) do
     t.string   "title"
     t.text     "description"
     t.datetime "deadline"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "user_id"
-    t.integer  "minimum_bid"
+    t.float    "minimum_bid", default: 0.0
   end
 
   create_table "users", force: :cascade do |t|
