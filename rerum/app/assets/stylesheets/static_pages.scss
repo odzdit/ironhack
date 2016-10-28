@@ -44,7 +44,6 @@ h2 {
 .right {
 	padding-right:10%;
 	padding-top:20px;
-
 }
 
 .image{
@@ -60,7 +59,7 @@ li {
     font-size: 18px;
 }
 
-li:before {
+.list > li:before {
     /*Using a Bootstrap glyphicon as the bullet point*/
     content: "\e013";
     font-family: 'Glyphicons Halflings';
@@ -76,9 +75,19 @@ li:before {
 }
 
 .icon{
-	height: 50px;
-	width: 50px;
-	display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+	display: inline;
+    margin-right: 20px;
+	margin-left: 20px;
+}
+
+.style_icon{
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.footer {
+	background-color: #5CB85C;
+	height: 300px;
+	background-size: 100%;
+	color: white;
 }
